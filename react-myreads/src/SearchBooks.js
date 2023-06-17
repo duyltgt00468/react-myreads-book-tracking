@@ -35,7 +35,7 @@ const SearchBooks = ({ books, onUpdate }) => {
                 <div className="search-books-input-wrapper">
                     <input
                         type="text"
-                        placeholder="Search by title, author, or ISBN"
+                        placeholder="Input here to search book..."
                         onChange={handleChange}
                     />
                 </div>
