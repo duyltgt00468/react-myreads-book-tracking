@@ -57,7 +57,7 @@ const SearchBooks = ({ books, onUpdate }) => {
             const activeCategory = books.find(book => book.id === searchedBook.id)?.shelf || 'none';
 
             return (
-              <BookItem key={searchedBook.id} data={searchedBook} activeCategory={activeCategory} onUpdate={onUpdate} />
+              <BookItem key={searchedBook.id} data={searchedBook} activeShelf={activeCategory} onUpdate={onUpdate} />
             );
           })}
           {(searchedBooks.length === 0 && textSearch) && <li>Sorry, we couldn't find any books for you. Please try another query.</li>}
