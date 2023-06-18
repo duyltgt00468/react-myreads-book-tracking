@@ -20,7 +20,8 @@ function App() {
           try {
               const res = await BooksAPI.update(book, shelf);
               if (res) {
-                  getBooks();
+                setBooks([...books.filter((b) => b.id !== book.id), book]);
+                getBooks();
               }
           } 
           catch (err) {
